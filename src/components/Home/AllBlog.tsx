@@ -35,7 +35,7 @@ const AllBlog = ({ postsImages }: Props): React.JSX.Element => {
         }
       </div>
 
-      <div className="border-t border-solid border-[#EAECF057] pt-2 mt-[32px]">
+      <div className="border-t border-solid border-[#EAECF057] pt-2 mt-[32px] sm:flex sm:items-center sm:justify-between">
         <button
           onClick={() => dispatch(prevPage())}
           className='text-[#667085] text-[14px] flex items-center mx-auto font-medium cursor-pointer'>
@@ -43,7 +43,7 @@ const AllBlog = ({ postsImages }: Props): React.JSX.Element => {
           Previous
         </button>
 
-        <p className='flex items-center justify-center'>
+        <p className='flex items-center justify-center flex-1'>
           {Array.from({ length: page.pages }, (_, index) => index + 1).map((pageNumber) => (
             <PageNumberBox number={pageNumber} currentPage={page.page} key={pageNumber} />
           ))}
