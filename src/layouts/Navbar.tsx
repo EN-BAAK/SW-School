@@ -8,7 +8,7 @@ import { useAppSelector } from '../app/hooks';
 import { bgDarkMode, bgLightMode } from '../misc/styles';
 
 const Navbar = (): React.ReactNode => {
-  const [navActive, setNavActive] = useState<boolean>(true)
+  const [navActive, setNavActive] = useState<boolean>(false)
   const theme = useAppSelector(state => state.theme.theme)
 
   return (

@@ -1,12 +1,13 @@
 import React from 'react'
 
 interface Props {
-  title: string
+  title: string,
+  style?: string
 }
 
-const SectionTitle = ({title}: Props):React.JSX.Element => {
+const SectionTitle = ({ title, style }: Props): React.JSX.Element => {
   return (
-    <h1 className='text-[24px] font-semibold'>{title}</h1>
+    <h1 className={`text-[24px] font-semibold ${style}`}>{title}</h1>
   )
 }
 
