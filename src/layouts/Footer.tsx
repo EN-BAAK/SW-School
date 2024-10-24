@@ -5,19 +5,19 @@ const Footer = (): React.JSX.Element => {
     <footer className='text-center text-[20px] pb-[30px] sm:flex sm:flex-row-reverse'>
       <ul className='flex flex-col gap-[14px] sm:flex-row mr-auto'>
         <li>
-          <a>Twitter</a>
+          <a className='cursor-pointer'>Twitter</a>
         </li>
         <li>
-          <a>LinkedIn</a>
+          <a className='cursor-pointer'>LinkedIn</a>
         </li>
         <li>
-          <a>Email</a>
+          <a className='cursor-pointer'>Email</a>
         </li>
         <li>
-          <a>RSS feed</a>
+          <a className='cursor-pointer'>RSS feed</a>
         </li>
         <li>
-          <a>Add to Feedly</a>
+          <a className='cursor-pointer'>Add to Feedly</a>
         </li>
       </ul>
 

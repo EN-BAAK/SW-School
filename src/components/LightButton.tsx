@@ -7,10 +7,11 @@ import { useAppDispatch } from '../app/hooks';
 import { setTheme } from '../features/theme/themeSlice';
 
 interface Props {
-  theme: Theme
+  theme: Theme,
+  onClose: () => void
 }
 
-const LightButton = ({ theme }: Props): React.ReactNode => {
+const LightButton = ({ theme, onClose }: Props): React.ReactNode => {
   const dispatch = useAppDispatch()
 
   return (
@@ -24,12 +25,18 @@ const LightButton = ({ theme }: Props): React.ReactNode => {
             className='cursor-pointer'
             size={24} />
           <div
-            onClick={() => dispatch(setTheme("dark"))}
+            onClick={() => {
+              dispatch(setTheme("dark"))
+              onClose()
+            }}
             className={`w-[24px] h-[24px] rounded-full ${bgLightMode}`} />
         </React.Fragment> :
         <React.Fragment>
           <div
-            onClick={() => dispatch(setTheme("light"))}
+            onClick={() => {
+              dispatch(setTheme("light"))
+              onClose()
+            }}
             className={`w-[24px] h-[24px] rounded-full ${bgDarkMode}`} />
           <IoMoonOutline
             className='cursor-pointer'

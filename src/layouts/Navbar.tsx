@@ -19,7 +19,6 @@ const Navbar = (): React.ReactNode => {
         <ul className={`
         flex items-center sm:flex-row ms:justify-between sm:gap-[16px]
         flex-col justify-center gap-[20px]
-        duration-300 
         ${theme === "light" ? bgLightMode : bgDarkMode}
         sm:static
         fixed right-0 top-0 bottom-0
@@ -51,7 +50,7 @@ const Navbar = (): React.ReactNode => {
             >Newsletter</Link>
           </li>
 
-          <LightButton theme={theme} />
+          <LightButton onClose={() => setNavActive(false)} theme={theme} />
           <HiXMark
             onClick={() => setNavActive(false)}
             size={32}
