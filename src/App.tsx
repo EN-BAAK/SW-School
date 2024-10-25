@@ -9,6 +9,7 @@ import Navbar from "./layouts/Navbar"
 import ScreenHolder from "./layouts/ScreenHolder"
 import Footer from "./layouts/Footer"
 import Blogs from "./screens/Blogs"
+import Newsletter from "./screens/Newsletter"
 
 const App = (): React.JSX.Element => {
   return (
@@ -31,6 +32,16 @@ const App = (): React.JSX.Element => {
               <ScreenHolder>
                 <Navbar />
                 <Blogs />
+                <Footer />
+              </ScreenHolder>
+            }
+          />
+          <Route
+            path="/newsletter"
+            element={
+              <ScreenHolder>
+                <Navbar />
+                <Newsletter />
                 <Footer />
               </ScreenHolder>
             }
