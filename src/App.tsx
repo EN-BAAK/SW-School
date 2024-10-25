@@ -10,6 +10,7 @@ import ScreenHolder from "./layouts/ScreenHolder"
 import Footer from "./layouts/Footer"
 import Blogs from "./screens/Blogs"
 import Newsletter from "./screens/Newsletter"
+import Empty from "./components/Empty"
 
 const App = (): React.JSX.Element => {
   return (
@@ -42,6 +43,16 @@ const App = (): React.JSX.Element => {
               <ScreenHolder>
                 <Navbar />
                 <Newsletter />
+                <Footer />
+              </ScreenHolder>
+            }
+          />
+          <Route
+            path="/*"
+            element={
+              <ScreenHolder>
+                <Navbar />
+                <Empty msg="This page is not found 404" />
                 <Footer />
               </ScreenHolder>
             }
