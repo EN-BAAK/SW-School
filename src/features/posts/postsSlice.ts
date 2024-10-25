@@ -1,18 +1,9 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { PostSection } from "../../misc/types";
+import { PostState } from "../../misc/types";
 import data from "../../assets/data/data.json";
 import { postImages, sectionImages } from "../../assets/data/images";
 
-type InitialState = {
-  posts: PostSection[];
-  mainImages: string[];
-  secImages: string[];
-  page: number;
-  pages: number;
-  visiblePosts: PostSection[];
-};
-
-const initialState: InitialState = {
+const initialState: PostState = {
   posts: data,
   mainImages: postImages,
   secImages: sectionImages,

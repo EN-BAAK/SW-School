@@ -25,7 +25,15 @@ export type Posts = {
   introText: string;
   categories: string[];
 };
-
 export type PostSection = Posts & {
   sections: Section[];
+};
+
+export type PostState = {
+  posts: PostSection[];
+  mainImages: string[];
+  secImages: string[];
+  page: number;
+  pages: number;
+  visiblePosts: PostSection[];
 };

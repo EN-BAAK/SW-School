@@ -1,7 +1,7 @@
 import React from 'react'
-import SectionTitle from '../SectionTitle'
-import { Posts } from '../../misc/types'
-import Post from '../Post'
+import SectionTitle from './SectionTitle'
+import { Posts } from '../misc/types'
+import Post from './Post'
 
 interface Props {
   posts: Posts[]
@@ -10,7 +10,7 @@ interface Props {
 
 const RecentBlog = ({ posts, postImages }: Props): React.JSX.Element => {
   return (
-    <React.Fragment>
+    <div>
       <SectionTitle style='mb-[32px]' title='Recent blog posts' />
 
       <div className="grid grid-cols-1 xl:grid-cols-2 items-stretch gap-[32px]">
@@ -53,7 +53,7 @@ const RecentBlog = ({ posts, postImages }: Props): React.JSX.Element => {
           introText={posts[3].introText}
           containerStyle='xl:col-span-2 xl:grid xl:grid-cols-2 xl:items-center xl:gap-[32px]' />
       </div>
-    </React.Fragment>
+    </div>
   )
 }
 
