@@ -27,25 +27,25 @@ const Navbar = (): React.ReactNode => {
           <h1 className='font-semibold sm:hidden mb-10'>Alaa Fayez</h1>
           <li>
             <Link
-              className={`${isActiveLink("/") ? "font-bold underline" : ""}`}
+              className={`${isActiveLink("/") ? "font-bold border-b border-solid pb-1" : ""} ${theme === "light" ? "border-[#090D1F]" : "border-white"}`}
               to="/"
             >Blog</Link>
           </li>
           <li>
             <Link
-              className={`${isActiveLink("/projects") ? "font-bold underline" : ""}`}
+              className={`${isActiveLink("/projects") ? "font-bold border-b border-solid pb-1" : ""} ${theme === "light" ? "border-[#090D1F]" : "border-white"}`}
               to="/projects"
             >Projects</Link>
           </li>
           <li>
             <Link
-              className={`${isActiveLink("/about") ? "font-bold underline" : ""}`}
+              className={`${isActiveLink("/about") ? "font-bold border-b border-solid pb-1" : ""} ${theme === "light" ? "border-[#090D1F]" : "border-white"}`}
               to="/about"
             >About</Link>
           </li>
           <li>
             <Link
-              className={`${isActiveLink("/newsletter") ? "font-bold underline" : ""}`}
+              className={`${isActiveLink("/newsletter") ? "font-bold border-b border-solid pb-1" : ""} ${theme === "light" ? "border-[#090D1F]" : "border-white"}`}
               to="/newsletter"
             >Newsletter</Link>
           </li>
