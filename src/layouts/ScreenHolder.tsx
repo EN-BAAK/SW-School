@@ -11,7 +11,7 @@ const ScreenHolder = ({ children }: Props): React.JSX.Element => {
 
   return (
     <div
-      className={`${theme === "light" ? bgLightMode : bgDarkMode} lg:px-[65px] lg:py-[20px]`}
+      className={`${theme === "light" ? bgLightMode : bgDarkMode} lg:px-[65px] lg:py-[20px] font-custom`}
     >
       {children}
     </div>
