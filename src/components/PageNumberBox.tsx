@@ -17,8 +17,7 @@ const PageNumberBox = ({ number, currentPage }: Props): React.ReactNode => {
       className={`
     rounded-[8px] w-[40px] h-[40px] text-[14px] my-4
     flex items-center justify-center font-medium
-    ${theme === "light" ? "text-[#667085]" : "text-white"}
-    ${number === currentPage && theme === "light" ? "bg-[#F9F5FF] text-[#7F56D9]" : number === currentPage ? "bg-[#F9F5FF] text-[#112211]" : ""}
+      ${theme === "light" ? number === currentPage ? "bg-[#F9F5FF] text-[#7F56D9]" : "text-[#667085]" : number === currentPage ? "bg-[#F9F5FF] text-[#112211]" : "text-white"}
     `}>
       {number}
     </button>
